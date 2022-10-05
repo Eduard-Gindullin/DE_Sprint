@@ -23,5 +23,5 @@ else:
 # Driver code
 if __name__ == "__main__":
     
-    print("Roman value is:", end = " ")
+    print("Римское число:", end = " ")
     printRoman(number)
