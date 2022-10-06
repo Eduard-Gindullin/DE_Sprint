@@ -3,9 +3,9 @@ from random import randint
 from bs4 import BeautifulSoup
 from requests import get as reqt
 import json
-
+#import tqdm
 import time
-
+#import user_agent
 
 data = {
     "data":[]
@@ -18,7 +18,7 @@ def headers():
 #
 items = list()
     
-for page in range(0-40):
+for page in range(0,40):
         page_url = f'https://hh.ru/search/vacancy?text=python+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&salary=&clusters=true&no_magic=true&ored_clusters=true&enable_snippets=true&page={page}&hhtmFrom=vacancy_search_list'
         resp = reqt(page_url, headers=headers()) 
         soup = BeautifulSoup(resp.text, "lxml")
