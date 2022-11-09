@@ -1,0 +1,75 @@
+package org.example
+import scala.io.StdIn.readLine
+import scala.language.postfixOps
+object App {
+
+  //def &&(bool: Boolean) = ???
+
+  def main(args: Array[String]): Unit = {
+    // Block A
+    //val startValString = "Hello World!"
+    var startVarString = "Hello World!"
+    println("Hello world!")
+    //reverse
+    println(startVarString.reverse)
+    //lowercase
+    println(startVarString.toLowerCase())
+    //minus exclamation
+    println(startVarString.init)
+    //add goodbye python
+    var gbP = ", and goodbye python!"
+    println(startVarString.init + gbP)
+    //Block B
+    println("введите годовой доход:")
+    val yearSalary = readLine().toInt
+    println("Размер премии, в процентах:")
+    val bonus = readLine().toInt
+    println("Компенсация питания:")
+    val eatCompensation = readLine().toInt
+
+    val sum = yearSalary + yearSalary*bonus/100 + eatCompensation
+    val gross = sum - sum*0.13
+    println("Годовая заработная платаб после вычета налогов: "+ gross)
+    println(sum.getClass)
+
+    //Block C
+    val firstList = List (100, 150, 200, 80, 120, 75)
+    val commonSalary = firstList.sum
+    val countPersons = firstList.size
+    var mediumSalary = commonSalary/countPersons
+    println("Средняя ЗП:"+mediumSalary)
+    val l = firstList map {_-mediumSalary}
+  //  val secondList = Array(firstList)
+
+
+    //var secondList = List (firstList-=mediumSalary)
+    println("Значения показывают отклонения от средней ЗП :"+l)
+
+    //BLock D
+    val secondList = firstList :+ 135
+    println("Появился новый сотрудник"+secondList)
+    println("Пора пересчитать среднюю ЗП")
+    val commonSalary1 = secondList.sum
+    val countPersons1 = secondList.size
+    var mediumSalary1 = commonSalary1 / countPersons1
+    println("Средняя ЗП новая:" + mediumSalary1)
+    val maxSalary = secondList.max
+    val minSalary = secondList.min
+    println("MAX зарплата: "+maxSalary)
+    println("MIN зарплата: "+minSalary)
+
+    //Block E
+    val thirdList = secondList :+ 350
+    val fourthList = Array(thirdList :+ 90)
+    //scala.util.Sorting.quickSort(fourthList)
+    fourthList.groupBy[K]
+    println(Array(fourthList))
+
+    //Block G
+    for (n <- firstList)
+    {
+      if ((n >= 120) && (n <= 200)) println(n, "middle")
+    }
+
+  }
+}
