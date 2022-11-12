@@ -9,3 +9,5 @@
 Текущий крайний коммит по этому файлу имеет номер e5583fe572e4f238936d65e5d7f5707363d58531, 13.54 12.11.2022
 
 Репозиторий коллеги https://github.com/Ragnarok-039/DE_Sprint, последний коммит 571d2db6c180575e8cd37d7187039fb79d8c98e1 5 дней назад 
+
+Сделал Fork https://github.com/Eduard-Gindullin/Ragnarok-039
